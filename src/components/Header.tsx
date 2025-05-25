@@ -3,7 +3,7 @@ import { User, Gift, Heart, Facebook, Instagram } from "lucide-react";
 
 export const Header: React.FC = () => {
     return (
-        <div className="bg-black/90 text-white p-1">
+        <div className="bg-black/85 text-white p-1">
             <div className="flex gap-2 items-center justify-between">
                 <div className="flex items-center">
                     <Facebook className="my-2 ml-2 mr-1 hover:text-red-600" />

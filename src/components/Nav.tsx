@@ -14,23 +14,35 @@ export const Nav: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="w-full bg-black/90 px-4 py-4">
+        <div className="w-full bg-black/80 px-4  pt-4 pb-0 md:py-4">
             {/* Top bar with logo and hamburger */}
             <div className="flex items-center justify-between md:hidden">
                 <img className="w-8 h-6" src={ReadersR} />
                 <button className="text-white" onClick={() => setMenuOpen(!menuOpen)}>
-                    {menuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+                    {menuOpen ? (
+                        <XIcon className="w-6 h-6" />
+                    ) : (
+                        <MenuIcon className="w-6 h-6" />
+                    )}
                 </button>
             </div>
 
             {/* Full Menu */}
-            <NavigationMenu viewport={false}>
+            <NavigationMenu
+                viewport={false}
+                className={`w-full justify-center mt-4 md:mt-0 mx-auto
+          transition-all duration-1000 ease-in-out
+          overflow-hidden
+          max-h-0 opacity-0
+          ${menuOpen ? "max-h-[1000px] opacity-100 pb-8" : ""}
+          md:max-h-full md:opacity-100 md:flex md:overflow-visible md:transition-none 
+        `}
+            >
                 <NavigationMenuList
                     className={`
-                        flex-col items-start space-y-2 mt-4 md:mt-0 md:flex md:flex-row md:items-center md:justify-start md:space-y-0 md:space-x-4
-                        ${menuOpen ? "flex" : "hidden"} 
-                        md:flex
-                    `}
+            flex flex-col items-center text-center space-y-2
+            md:flex-row md:space-y-0 md:space-x-6 md:text-left
+          `}
                 >
                     {[
                         { label: "Books", links: ["/genres", "/bestsellers"] },
@@ -38,10 +50,8 @@ export const Nav: React.FC = () => {
                         { label: "Stationery", links: ["/genres", "/bestsellers"] },
                         { label: "Toys", links: ["/genres", "/bestsellers"] },
                     ].map((item, idx) => (
-                        <NavigationMenuItem key={idx} className="w-full md:w-full ">
-                            <NavigationMenuTrigger
-                                className="bg-red-600 text-white w-full md:w-auto  justify-center flex align-middle"
-                            >
+                        <NavigationMenuItem key={idx} className="w-full md:w-auto">
+                            <NavigationMenuTrigger className="bg-red-600 text-white w-full md:w-auto justify-center">
                                 {item.label}
                             </NavigationMenuTrigger>
                             <NavigationMenuContent className="bg-white p-4 rounded shadow w-full md:w-auto">
