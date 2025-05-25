@@ -1,8 +1,7 @@
-import {Header} from "@/components/Header.tsx"
+import {Header} from "@/components/Header"
 import './App.css'
-import {Search} from "@/components/Search.tsx";
+import {Search} from "@/components/Search";
 import {Nav} from "@/components/Nav";
-import {OfferCarousel} from "@/components/OfferCarousel";
 
 function App() {
 
@@ -11,7 +10,7 @@ function App() {
       <Header/>
         <Search/>
         <Nav/>
-        <OfferCarousel/>
+
     </>
 
   )

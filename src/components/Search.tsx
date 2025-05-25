@@ -1,7 +1,7 @@
 import { Search as SearchIcon} from "lucide-react";
 import { ShoppingCart } from 'lucide-react';
 import ReadersLogo from "../assets/readers-fully-booked.png";
-import React, {useState} from "react";
+import {useState} from "react";
 export const Search : React.FC = () => {
 const [searchValue, setSearchValue] = useState<string>("");
     return (

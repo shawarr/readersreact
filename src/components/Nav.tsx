@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ReadersR from "../assets/readersR.png";
 import {
     NavigationMenu,

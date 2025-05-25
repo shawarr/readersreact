@@ -1,4 +1,4 @@
-import React from "react";
+
 import { User, Gift, Heart, Facebook, Instagram } from "lucide-react";
 
 export const Header: React.FC = () => {

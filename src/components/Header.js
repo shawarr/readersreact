@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { User, Gift, Heart, Facebook, Instagram } from "lucide-react";
+export const Header = () => {
+    return (_jsx("div", { className: "bg-black/85 text-white p-1", children: _jsxs("div", { className: "flex gap-2 items-center justify-between", children: [_jsxs("div", { className: "flex items-center", children: [_jsx(Facebook, { className: "my-2 ml-2 mr-1 hover:text-red-600" }), _jsx(Instagram, { className: "my-2 ml-1 mr-2 hover:text-red-600" })] }), _jsxs("div", { className: "flex items-center", children: [_jsxs("div", { className: "hover:text-red-600 flex items-center", children: [_jsx(Gift, { className: "my-2 mr-1" }), _jsx("p", { className: "mr-2", children: "Gift Card" })] }), _jsxs("div", { className: "hover:text-red-600 flex items-center", children: [_jsx(Heart, { className: "my-2 ml-2 mr-1" }), _jsx("p", { className: "mr-2", children: "Wishlist (0)" })] }), _jsx(User, { className: "my-2 mx-2 hover:text-red-600" })] })] }) }));
+};
